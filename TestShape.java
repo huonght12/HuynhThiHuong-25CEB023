@@ -1,3 +1,4 @@
+
 package baitap6_1;
 
 public class TestShape {
@@ -27,5 +28,6 @@ public class TestShape {
         System.out.println(r1.getArea());
         System.out.println(r1.getColor());
         System.out.println(r1.getLength());
-    }
-}
+
+
+
