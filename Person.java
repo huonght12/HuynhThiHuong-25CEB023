@@ -1,35 +1,51 @@
-package baitap4_2;
 
-public class Person {
-    private String name;
-    private String address;
+ abstract class Person {
+    private String hoTen;
+    private String diaChi;
+    private int namSing;
 
-    // Constructor
-    public Person(String name, String address) {
-        this.name = name;
-        this.address = address;
+    public Person(){
+
+    }
+    public Person(String hoTen, String diaChi, int namSinh) {
+        this.hoTen=hoTen;
+        this.diaChi=diaChi;
+        this.namSing=namSinh;
     }
 
-    // Getter cho name
-    public String getName() {
-        return name;
+     public Person(String diaChi) {
+         this.diaChi = diaChi;
+     }
+
+     public String getHoTen(){
+        return hoTen;
     }
 
-    // Getter cho address
-    public String getAddress() {
-        return address;
+     public int getNamSing() {
+         return namSing;
+     }
+
+     public void setHoTen(String hoTen) {
+         this.hoTen = hoTen;
+     }
+
+     public void setDiaChi(String diaChi) {
+         this.diaChi = diaChi;
+     }
+
+     public void setNamSing(int namSing) {
+         this.namSing = namSing;
+     }
+
+     public abstract String getLoai();
+
+    public void inThongtin(){
+        System.out.println("Loai: " + getLoai());
+        System.out.println("Ho ten: " + hoTen);
+        System.out.println("Dia chi: " + diaChi);
+        System.out.println("Nam sinh: " + namSing);
     }
 
-    // Setter cho address
-    public void setAddress(String address) {
-        this.address = address;
-    }
 
-    // Phương thức toString()
-    @Override
-    public String toString() {
-        return "Person[name=" + name + ",address=" + address + "]";
-    }
-}
-
+ }
 
